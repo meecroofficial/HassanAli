@@ -61,24 +61,7 @@ if (skillsSection) {
     skillObserver.observe(skillsSection);
 }
 
-// Contact form handling
-document.querySelector('.contact-form').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = this.querySelector('input[type="text"]').value;
-    const email = this.querySelector('input[type="email"]').value;
-    const message = this.querySelector('textarea').value;
-    
-    // Simple validation
-    if (name && email && message) {
-        alert('Thank you for your message! I\'ll get back to you soon.');
-        this.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
+
 
 // Add loading animation to CTA button
 document.querySelector('.cta-button').addEventListener('click', function(e) {
